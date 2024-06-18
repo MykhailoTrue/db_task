@@ -7,7 +7,8 @@
     "start": "ts-node src/index.ts",
     "dev": "nodemon src/index.ts",
     "create_migrations": "npx typeorm migration:create src/migrations/CreateSchemas && npx typeorm migration:create src/migrations/CreateTables",
-    "apply_migrations": "npx ts-node src/migration-runner.ts"
+    "apply_migrations": "npx ts-node src/migration-runner.ts",
+    "seed": "ts-node src/seeder-runner.ts"
   },
   "keywords": [],
   "author": "",
@@ -20,9 +21,11 @@
     "typescript": "^5.4.5"
   },
   "dependencies": {
+    "@faker-js/faker": "^8.4.1",
     "dotenv": "^16.4.5",
     "pg": "^8.12.0",
     "reflect-metadata": "^0.2.2",
-    "typeorm": "^0.3.20"
+    "typeorm": "^0.3.20",
+    "typeorm-extension": "^3.5.1"
   }
 }
